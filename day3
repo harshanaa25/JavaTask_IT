@@ -1,0 +1,121 @@
+package com.demo;
+
+import java.util.Date;
+
+public class Day3 {
+	private String username;
+	private String password;
+	private String email;
+	private String address;
+	private long mobilenumber;
+	private Date createAt;
+	private Date updateAt;
+	private boolean isActive;
+
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username=username;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password=password;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email=email;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address=address;
+	}
+	
+	public long getMobilenumber() {
+		return mobilenumber;
+	}
+	public void setMobilenumber(long mobilenumber) {
+		this.mobilenumber=mobilenumber;
+	}
+	
+	public Date getcreateAt() {
+		return createAt;
+	}
+	public void setcreateAt(Date createAt) {
+		this.createAt=createAt;
+	}
+	
+	public Date getupdateAt() {
+		return updateAt;
+	}
+	public void setupdateAt(Date updateAt) {
+		this.updateAt=updateAt;
+	}
+	
+	public Boolean getisActive() {
+		return isActive;
+	}
+	public void setisActive(Boolean isActive) {
+		this.isActive=isActive;
+	}
+}
+
+
+package com.demo;
+
+import java.util.Date;
+import java.util.Scanner;
+
+public class Register{
+	public static void main(String args[]) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("How many users do you want to register?");
+        int n= scan.nextInt();
+        
+		for (int i = 0; i <=n; i++) {
+           
+		System.out.println("Enter your username:");
+		String username=scan.nextLine();
+		System.out.println("Enter password:");
+		String password=scan.nextLine();
+		System.out.println("Enter email:");
+		String email=scan.nextLine();
+		System.out.println("Address:");
+		String address=scan.nextLine();
+		System.out.println("Enter mobile number:");
+		long mobilenumber=scan.nextLong();
+		Date createAt=new Date();
+		Date updateAt=new Date();
+		boolean isActive=true;
+		
+		Day3 per1 = new Day3();
+		per1.setUsername(username);
+		per1.setPassword(password);
+		per1.setEmail(email);
+		per1.setAddress(address);
+		per1.setMobilenumber(mobilenumber);
+		per1.setcreateAt(createAt);
+		per1.setupdateAt(updateAt);
+		per1.setisActive(isActive);
+		
+		System.out.println(per1.getUsername());
+		System.out.println(per1.getPassword());
+		System.out.println(per1.getEmail());
+		System.out.println(per1.getAddress());
+		System.out.println(per1.getMobilenumber());
+		System.out.println(per1.getcreateAt());
+		System.out.println(per1.getupdateAt());
+		System.out.println(per1.getisActive());
+		}
+	}
+}
+
